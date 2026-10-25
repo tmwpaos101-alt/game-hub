@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f6f7fb"><title>게임도감 | 나의 게임 노트</title><link rel="stylesheet" href="style.css"></head>
+<body><div class="app-shell">
+<header class="topbar"><a class="brand" href="#"><span class="brand-icon">G</span><span>게임도감 <small>MY LIBRARY</small></span></a><div class="top-actions"><span class="save-state"><i></i> 내 기기에 저장</span><button id="add-button" class="add-button">＋ 새 기록</button></div></header>
+<main><section class="hero"><div><p class="eyebrow">MY GAME COLLECTION</p><h1>내 게임 도감</h1><p class="hero-copy">캐릭터와 세팅, 파티 조합을 나만의 기준으로 모아봐.</p></div><div class="hero-art" aria-hidden="true">✦</div></section>
+<nav id="game-tabs" class="game-tabs" aria-label="게임 선택"></nav>
+<section class="section-head"><div><p class="eyebrow" id="game-kicker"></p><h2 id="game-title"></h2></div><div class="search-wrap"><span>⌕</span><input id="search" type="search" placeholder="이름이나 속성으로 검색"></div></section>
+
+<div class="results-line"><span id="result-count"></span><span>기록을 눌러 상세 세팅 보기</span></div>
+<section id="content" class="content" aria-live="polite"></section></main>
+<footer><span>기록은 현재 브라우저에 저장돼.</span><span>자료를 추가할 때 출처와 확인일도 함께 적어둘 수 있어.</span></footer></div>
+<dialog id="entry-dialog"><form id="entry-form"><div class="dialog-head"><div><p class="eyebrow">COLLECTION EDITOR</p><h2 id="dialog-title">새 기록</h2></div><button type="button" id="close-dialog" class="close-button" aria-label="닫기">×</button></div>
+<div class="form-grid"><label class="wide">이름<input id="entry-name" maxlength="70" required placeholder="예: 아카네"></label><label>속성 / 역할<input id="entry-tag" maxlength="40" placeholder="예: 얼음, 메인 딜러"></label><label>무기 종류<input id="entry-subtag" maxlength="40" placeholder="예: 한손검"></label><label class="wide">이미지 주소 (선택)<input id="entry-image" type="url" placeholder="https://..."></label><label class="wide">캐릭터 설명 / 메모<textarea id="entry-summary" rows="3" maxlength="600"></textarea></label><label class="wide"><span id="weapon-label">추천 무기</span><textarea id="entry-weapon" rows="2" maxlength="600" placeholder="추천 순서와 대체 무기"></textarea></label><label class="wide"><span id="gear-label">성유물 / 장비</span><textarea id="entry-gear" rows="2" maxlength="600" placeholder="추천 세트와 주옵션"></textarea></label><label><span id="avg-label">평균 목표 스탯</span><textarea id="entry-avg" rows="3" maxlength="500"></textarea></label><label><span id="near-label">준종결 스탯</span><textarea id="entry-near" rows="3" maxlength="500"></textarea></label><label class="wide"><span id="end-label">종결 스탯</span><textarea id="entry-end" rows="3" maxlength="500"></textarea></label><label class="wide">파티 조합<textarea id="entry-team" rows="3" maxlength="600" placeholder="추천 멤버와 운영 메모"></textarea></label><label class="wide">자료 출처 URL (여러 개면 줄바꿈)<textarea id="entry-source" rows="3" placeholder="공식 가이드나 참고한 공략 주소를 한 줄에 하나씩"></textarea></label></div><div class="dialog-actions"><button type="button" id="cancel-entry" class="secondary-button">취소</button><button class="save-button" type="submit">저장하기</button></div></form></dialog>
+<dialog id="detail-dialog"><article id="detail-content"></article></dialog><script src="app.js"></script></body></html>
+
+
